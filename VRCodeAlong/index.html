@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My VR Code Along</title>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script> 
+    <script src="script.js"></script>
+</head>
+<body>
+    <a-scene change-tree-color cursor="rayOrigin:mouse">
+        <a-camera>
+            <a-cursor></a-cursor>
+        </a-camera>
+        <a-sky src="https://live.staticflickr.com/4723/28171556989_b02fb644ec_o.jpg"></a-sky>
+    
+        <!--Insert Tree 1-->
+        <a-entity position="4 1 -5">
+            <a-cylinder radius=".25" height="1" color="brown" shadow></a-cylinder>
+            <a-cone position="0 1 0" radius-bottom=".75" radius-top="0" height="1.75" color="green"></a-cone>
+        </a-entity>
+
+        <!--Insert Tree 2-->
+        <a-entity position="-3 1 -5">
+            <a-cylinder radius=".25" height="1" color="brown" shadow></a-cylinder>
+            <a-cone position="0 1 0" radius-bottom=".75" radius-top="0" height="1.75" color="green"></a-cone>
+        </a-entity>
+
+        <!--Insert Snowman-->
+        <a-entity position="0 1 -2">
+            <!--Bottom Snowball-->
+            <a-dodecahedron color="white" radius=".5"></a-dodecahedron>
+
+            <!--Middle Snowball-->
+            <a-dodecahedron click-listener position="0 .5 0" color="white" radius=".4"></a-dodecahedron>
+
+            <!--Top Snowball-->
+            <a-dodecahedron change-color-hover position="0 1 0" color="white" radius=".3"></a-dodecahedron>
+            
+            <!--Two creepy eyes-->
+            <a-circle position=".05 0.85 1" color="black" radius=".03"></a-circle>
+            <a-circle position="-.05 0.85 1" color="black" radius=".03"></a-circle>
+        
+        </a-entity>
+    
+    </a-scene>
+</body>
+</html>
